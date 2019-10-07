@@ -1,0 +1,3 @@
+/home/rex/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/rebuild_cache.dir
+/home/rex/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/edit_cache.dir
+/home/rex/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/main.dir
