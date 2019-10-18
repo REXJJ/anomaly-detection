@@ -17,3 +17,5 @@ include_directories(${ARMADILLO_INCLUDE_DIRS})
 add_executable(main  main.cpp)
 target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${MLPACK_LIBRARY} ${ARMADILLO_LIBRARIES})
 
+add_executable(contour_method  contour_method.cpp)
+target_link_libraries( contour_method ${OpenCV_LIBS})

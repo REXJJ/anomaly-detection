@@ -12,7 +12,6 @@
   
 using namespace std; 
 using namespace mlpack; 
-using Eigen::MatrixXd; 
 using namespace std;
 using namespace cv;
 using namespace Eigen;
@@ -59,8 +58,8 @@ void image_params::gradient_calculation()
           count++;
         }
       }
-      X(i,j)=float(xb-xa)/count;
-      Y(i,j)=float(yb-ya)/count;   
+      X(i,j)=float(xb-xa);
+      Y(i,j)=float(yb-ya);   
       M(i,j)=sqrt(X(i,j)*X(i,j)+Y(i,j)*Y(i,j));   
       A(i,j)=atan2(Y(i,j),X(i,j));
     }
@@ -80,7 +79,7 @@ void image_params::stat_calculation()
         continue;
       }
       MatrixXf sub=M.block(i-kernel_size/2,j-kernel_size/2,kernel_size,kernel_size);
-      mean_m(i,j)=sub.sum()/(kernel_size*kernel_size);
+      mean_m(i,j)=sub.mean();
       MatrixXf temp=sub-MatrixXf::Ones(kernel_size,kernel_size)*mean_m(i,j);
       MatrixXf squares=temp*temp;
       std_m(i,j)=sqrt(squares.sum());
@@ -109,6 +108,20 @@ image_params::image_params(Mat& img,int k,int ks)
   gradient_calculation();
 }
 
+Mat get_mask(MatrixXf& ref,MatrixXf& test)
+{
+	Mat mask(cv::Size(ref.cols(),ref.rows()),CV_8UC1,Scalar(0));
+	for(int i=0;i<ref.rows();i++)
+	{
+		for(int j=0;j<ref.cols();j++)
+		{
+			if(abs(ref(i,j)-test(i,j))>30)
+				mask.at<uchar>(i,j)=255;
+		}
+	}
+	return mask;
+}
+
 int main( int argc, char** argv)
 {
 
@@ -122,24 +135,32 @@ int main( int argc, char** argv)
      cout <<" Usage: ReferenceImage TestImage" << endl;
      return -1;
     }
-
-  Mat out(reference.size(),reference.type(),0);
-
   reference=cv::imread(argv[1],0);
-  std::cout<<reference.rows<<endl;
   test=cv::imread(argv[2],0);
-  image_params image(reference,2,7);
+  Mat out(reference.size(),reference.type(),0);
+  test=cv::imread(argv[2],0);
+  image_params image(reference,1,7);
+  image_params test_(test,1,7);
   image.stat_calculation();
-  for(size_t i=0;i<image.mean_m.rows();i++){
-     for(size_t j=0;j<image.mean_m.cols();j++){
-       f1<<image.mean_m(i,j)<<", ";
+  test_.stat_calculation();
+  Mat mask=get_mask(image.mean_m,test_.mean_m);
+  namedWindow( "Display window", WINDOW_AUTOSIZE );
+  imshow( "Display window", mask );     
+  namedWindow( "Real Image", WINDOW_AUTOSIZE );
+  imshow( "Real Image", test );             
+  waitKey(0);                                         
+
+
+  for(size_t i=0;i<test_.mean_m.rows();i++){
+     for(size_t j=0;j<test_.mean_m.cols();j++){
+       f1<<test_.M(i,j)<<", ";
      }
      f1<<"\n";
    }
 
-  for(size_t i=0;i<image.Y.rows();i++){
-     for(size_t j=0;j<image.Y.cols();j++){
-       f2<<image.Y(i,j)<<", ";
+  for(size_t i=0;i<test_.mean_m.rows();i++){
+     for(size_t j=0;j<test_.mean_m.rows();j++){
+       f2<<image.M(i,j)<<", ";
      }
      f2<<"\n";
    }
