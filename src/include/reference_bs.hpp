@@ -1,3 +1,5 @@
+#ifndef REFERENCE_BS_HPP
+#define REFERENCE_BS_HPP
 #include <iostream>
 #include <cmath>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -6,8 +8,7 @@
 #include <Eigen/Core>
 #include <opencv2/core/eigen.hpp>
 #include <fstream>
-#include "Debugging_Utilities/debugging_utilities.h"
-  
+#include "/home/rex/Desktop/REX_WS/AnomalousRegion1/src/Debugging_Utilities/debugging_utilities.h"  
 using namespace std;
 using namespace cv;
 using namespace Eigen;
@@ -24,10 +25,14 @@ class image_params
     MatrixXf std_m;
     MatrixXf mean_A;
     MatrixXf std_A;
+    VectorXi per;
+
     int K,kernel_size;
     image_params(Mat& img, int k,int ks);
     void gradient_calculation();
     void stat_calculation();
+    void percentile();
+    Mat filter_vectors();
 };
 
 void image_params::gradient_calculation()
@@ -54,10 +59,12 @@ void image_params::gradient_calculation()
           count++;
         }
       }
-      X(i,j)=float(xb-xa);
-      Y(i,j)=float(yb-ya);   
-      M(i,j)=sqrt(X(i,j)*X(i,j)+Y(i,j)*Y(i,j));   
+      X(i,j)=float(xb-xa)/count;
+      Y(i,j)=float(yb-ya)/count;   
+      M(i,j)=abs(sqrt(X(i,j)*X(i,j)+Y(i,j)*Y(i,j)));   
       A(i,j)=atan2(Y(i,j),X(i,j));
+      int index=int(M(i,j));
+      per(index)=per(index)+1;
     }
   }
 }
@@ -97,6 +104,13 @@ void image_params::stat_calculation()
   }
 }
 
+void image_params::percentile()
+{
+  for(int i=1;i<360;i++){
+    per(i)=per(i)+per(i-1);
+  }
+}
+
 image_params::image_params(Mat& img,int k,int ks)
 {
   image=img;
@@ -110,6 +124,7 @@ image_params::image_params(Mat& img,int k,int ks)
   std_A.resize(img.rows,img.cols);
   K=k;
   kernel_size=ks;
+  per=VectorXi::Zero(360);
   gradient_calculation();
 }
 
@@ -120,54 +135,25 @@ Mat get_mask(MatrixXf& ref_mean,MatrixXf& test_mean, MatrixXf& ref_sd,MatrixXf& 
 	{
 		for(int j=0;j<ref_mean.cols();j++)
 		{
-			if(abs(ref_mean(i,j)-test_mean(i,j))>36||abs(ref_sd(i,j)-test_mean(i,j))>100||abs(refA_mean(i,j)-testA_mean(i,j))>55)
+			if(abs(ref_mean(i,j)-test_mean(i,j))>10||abs(ref_sd(i,j)-test_mean(i,j))>100||abs(refA_mean(i,j)-testA_mean(i,j))>55)
 				mask.at<uchar>(i,j)=255;
 		}
 	}
 	return mask;
 }
 
-int main( int argc, char** argv)
+Mat image_params::filter_vectors()
 {
-
-  // ofstream f1,f2;
-  // f1.open("mean_m_ref.csv",ios::out);
-  // f2.open("mean_A_ref.csv",ios::out);
- 
-  Mat reference,test;
-  // if( argc < 2)
-  //   {
-  //    cout <<" Usage: ReferenceImage TestImage" << endl;
-  //    return -1;
-  //   }
-  reference=cv::imread(argv[1],0);
-  test=cv::imread(argv[2],0);
-  Mat out(reference.size(),reference.type(),0);
-  test=cv::imread(argv[2],0);
-  image_params image(reference,1,7);
-  image_params test_(test,1,7);
-  image.stat_calculation();
-  test_.stat_calculation();
-  Mat mask=get_mask(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A);
-  namedWindow( "Display window", WINDOW_AUTOSIZE );
-  imshow( "Display window", mask );     
-  namedWindow( "Real Image", WINDOW_AUTOSIZE );
-  imshow( "Real Image", test );             
-  waitKey(0);                                         
-
-
-/*  for(size_t i=0;i<test_.mean_m.rows();i++){
-     for(size_t j=0;j<test_.mean_m.cols();j++){
-       f1<<test_.M(i,j)<<", ";
-     }
-     f1<<"\n";
-   }
-
-  for(size_t i=0;i<test_.mean_m.rows();i++){
-     for(size_t j=0;j<test_.mean_m.rows();j++){
-       f2<<image.M(i,j)<<", ";
-     }
-     f2<<"\n";
-   }*/
-  return 0;
+    Mat mask(cv::Size(M.cols(),M.rows()),CV_8UC1,Scalar(0));
+    for(int i=0;i<M.rows();i++)
+      for(int j=0;j<M.cols();j++)
+      {
+        int index=abs(int(M(i,j)));
+        double p = double(per(index))/double(per(359))*100;
+        if(p>=90&&p<=93)
+          mask.at<uchar>(i,j)=255;
+      }
+      return mask;
 }
+
+#endif

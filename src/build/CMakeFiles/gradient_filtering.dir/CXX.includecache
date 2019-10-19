@@ -14,7 +14,7 @@ chrono
 stdio.h
 -
 
-/home/rex/Desktop/REX_WS/AnomalousRegion1/src/contour_method.cpp
+/home/rex/Desktop/REX_WS/AnomalousRegion1/src/gradient_filtering.cpp
 cv.h
 /home/rex/Desktop/REX_WS/AnomalousRegion1/src/cv.h
 highgui.h

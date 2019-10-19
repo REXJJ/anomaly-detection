@@ -31,10 +31,6 @@ opencv2/core/eigen.hpp
 -
 fstream
 -
-mlpack/core.hpp
--
-mlpack/methods/neighbor_search/neighbor_search.hpp
--
 Debugging_Utilities/debugging_utilities.h
 /home/rex/Desktop/REX_WS/AnomalousRegion1/src/Debugging_Utilities/debugging_utilities.h
 

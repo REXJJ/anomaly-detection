@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named contour_method
 
 # Build rule for target.
@@ -124,17 +137,17 @@ contour_method/fast:
 .PHONY : contour_method/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named gradient_filtering
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+gradient_filtering: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gradient_filtering
+.PHONY : gradient_filtering
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+gradient_filtering/fast:
+	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/build
+.PHONY : gradient_filtering/fast
 
 contour_method.o: contour_method.cpp.o
 
@@ -162,6 +175,33 @@ contour_method.s: contour_method.cpp.s
 contour_method.cpp.s:
 	$(MAKE) -f CMakeFiles/contour_method.dir/build.make CMakeFiles/contour_method.dir/contour_method.cpp.s
 .PHONY : contour_method.cpp.s
+
+gradient_filtering.o: gradient_filtering.cpp.o
+
+.PHONY : gradient_filtering.o
+
+# target to build an object file
+gradient_filtering.cpp.o:
+	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.o
+.PHONY : gradient_filtering.cpp.o
+
+gradient_filtering.i: gradient_filtering.cpp.i
+
+.PHONY : gradient_filtering.i
+
+# target to preprocess a source file
+gradient_filtering.cpp.i:
+	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.i
+.PHONY : gradient_filtering.cpp.i
+
+gradient_filtering.s: gradient_filtering.cpp.s
+
+.PHONY : gradient_filtering.s
+
+# target to generate assembly for a file
+gradient_filtering.cpp.s:
+	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.s
+.PHONY : gradient_filtering.cpp.s
 
 main.o: main.cpp.o
 
@@ -197,12 +237,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... contour_method"
 	@echo "... main"
+	@echo "... contour_method"
+	@echo "... edit_cache"
+	@echo "... gradient_filtering"
 	@echo "... contour_method.o"
 	@echo "... contour_method.i"
 	@echo "... contour_method.s"
+	@echo "... gradient_filtering.o"
+	@echo "... gradient_filtering.i"
+	@echo "... gradient_filtering.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

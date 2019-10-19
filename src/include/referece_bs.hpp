@@ -1,3 +1,5 @@
+#ifndef REFERENCE_BS_HPP
+#define REFERENCE_BS_HPP
 #include <iostream>
 #include <cmath>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -127,47 +129,4 @@ Mat get_mask(MatrixXf& ref_mean,MatrixXf& test_mean, MatrixXf& ref_sd,MatrixXf& 
 	return mask;
 }
 
-int main( int argc, char** argv)
-{
-
-  // ofstream f1,f2;
-  // f1.open("mean_m_ref.csv",ios::out);
-  // f2.open("mean_A_ref.csv",ios::out);
- 
-  Mat reference,test;
-  // if( argc < 2)
-  //   {
-  //    cout <<" Usage: ReferenceImage TestImage" << endl;
-  //    return -1;
-  //   }
-  reference=cv::imread(argv[1],0);
-  test=cv::imread(argv[2],0);
-  Mat out(reference.size(),reference.type(),0);
-  test=cv::imread(argv[2],0);
-  image_params image(reference,1,7);
-  image_params test_(test,1,7);
-  image.stat_calculation();
-  test_.stat_calculation();
-  Mat mask=get_mask(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A);
-  namedWindow( "Display window", WINDOW_AUTOSIZE );
-  imshow( "Display window", mask );     
-  namedWindow( "Real Image", WINDOW_AUTOSIZE );
-  imshow( "Real Image", test );             
-  waitKey(0);                                         
-
-
-/*  for(size_t i=0;i<test_.mean_m.rows();i++){
-     for(size_t j=0;j<test_.mean_m.cols();j++){
-       f1<<test_.M(i,j)<<", ";
-     }
-     f1<<"\n";
-   }
-
-  for(size_t i=0;i<test_.mean_m.rows();i++){
-     for(size_t j=0;j<test_.mean_m.rows();j++){
-       f2<<image.M(i,j)<<", ";
-     }
-     f2<<"\n";
-   }*/
-  return 0;
-}
+#endif

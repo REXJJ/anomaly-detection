@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11 -O3
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/opencv -I/home/rex/Desktop/REX_WS/AnomalousRegion1/src/include 
+CXX_INCLUDES = -I/usr/include/opencv 
 
