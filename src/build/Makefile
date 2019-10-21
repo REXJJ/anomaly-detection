@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
 # Target rules for targets named contour_method
 
 # Build rule for target.
@@ -148,6 +135,59 @@ gradient_filtering: cmake_check_build_system
 gradient_filtering/fast:
 	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/build
 .PHONY : gradient_filtering/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named clustering_test
+
+# Build rule for target.
+clustering_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clustering_test
+.PHONY : clustering_test
+
+# fast build rule for target.
+clustering_test/fast:
+	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/build
+.PHONY : clustering_test/fast
+
+clustering_test.o: clustering_test.cpp.o
+
+.PHONY : clustering_test.o
+
+# target to build an object file
+clustering_test.cpp.o:
+	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.o
+.PHONY : clustering_test.cpp.o
+
+clustering_test.i: clustering_test.cpp.i
+
+.PHONY : clustering_test.i
+
+# target to preprocess a source file
+clustering_test.cpp.i:
+	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.i
+.PHONY : clustering_test.cpp.i
+
+clustering_test.s: clustering_test.cpp.s
+
+.PHONY : clustering_test.s
+
+# target to generate assembly for a file
+clustering_test.cpp.s:
+	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.s
+.PHONY : clustering_test.cpp.s
 
 contour_method.o: contour_method.cpp.o
 
@@ -237,10 +277,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... contour_method"
 	@echo "... edit_cache"
+	@echo "... contour_method"
 	@echo "... gradient_filtering"
+	@echo "... main"
+	@echo "... clustering_test"
+	@echo "... clustering_test.o"
+	@echo "... clustering_test.i"
+	@echo "... clustering_test.s"
 	@echo "... contour_method.o"
 	@echo "... contour_method.i"
 	@echo "... contour_method.s"

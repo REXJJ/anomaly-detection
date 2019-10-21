@@ -26,6 +26,8 @@ class image_params
     MatrixXf mean_A;
     MatrixXf std_A;
     VectorXi per;
+    vector<pair<int,int>> filtered;
+    MatrixXi ids;
 
     int K,kernel_size;
     image_params(Mat& img, int k,int ks);
@@ -122,6 +124,7 @@ image_params::image_params(Mat& img,int k,int ks)
   std_m.resize(img.rows,img.cols);
   mean_A.resize(img.rows,img.cols);
   std_A.resize(img.rows,img.cols);
+  ids=MatrixXi::Ones(img.rows,img.cols)*-1;
   K=k;
   kernel_size=ks;
   per=VectorXi::Zero(360);
@@ -145,13 +148,18 @@ Mat get_mask(MatrixXf& ref_mean,MatrixXf& test_mean, MatrixXf& ref_sd,MatrixXf& 
 Mat image_params::filter_vectors()
 {
     Mat mask(cv::Size(M.cols(),M.rows()),CV_8UC1,Scalar(0));
+    int count=0;
     for(int i=0;i<M.rows();i++)
       for(int j=0;j<M.cols();j++)
       {
         int index=abs(int(M(i,j)));
         double p = double(per(index))/double(per(359))*100;
-        if(p>=90&&p<=93)
+        if(p>=90&&p<=93){
           mask.at<uchar>(i,j)=255;
+          filtered.push_back(make_pair(i,j));
+          ids(i,j)=count;
+          count++;
+        }
       }
       return mask;
 }

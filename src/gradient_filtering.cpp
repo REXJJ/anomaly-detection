@@ -8,7 +8,6 @@ using namespace std;
 int main( int argc, char** argv )
 {
   VideoCapture cap("/home/rex/Desktop/ICRA/test1.mp4"); 
-    
   // Check if camera opened successfully
   if(!cap.isOpened()){
     cout << "Error opening video stream or file" << endl;
@@ -18,7 +17,7 @@ int main( int argc, char** argv )
   Mat reference,test;
   reference=imread("/home/rex/Desktop/ICRA/ref_image.jpg",0);
   image_params image(reference,2,7);
-  image.stat_calculation();
+  // image.stat_calculation();
   int count=0;
   while(1){ 
       Mat frame;
@@ -35,7 +34,7 @@ int main( int argc, char** argv )
       //   }
 
       image_params test_(test,2,7);
-      test_.stat_calculation();
+      // // test_.stat_calculation();
       test_.percentile();
       Mat mask=test_.filter_vectors();
       namedWindow( "Display window", WINDOW_AUTOSIZE );

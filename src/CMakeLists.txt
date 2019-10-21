@@ -23,3 +23,6 @@ target_link_libraries( contour_method ${OpenCV_LIBS})
 
 add_executable(gradient_filtering  gradient_filtering.cpp)
 target_link_libraries(gradient_filtering ${OpenCV_LIBS})
+
+add_executable(clustering_test  clustering_test.cpp)
+target_link_libraries(clustering_test ${OpenCV_LIBS})

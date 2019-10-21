@@ -49,7 +49,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/contour_method.dir/DependInfo.cmake"
   "CMakeFiles/gradient_filtering.dir/DependInfo.cmake"
+  "CMakeFiles/main.dir/DependInfo.cmake"
+  "CMakeFiles/clustering_test.dir/DependInfo.cmake"
   )
