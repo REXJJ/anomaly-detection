@@ -67,9 +67,10 @@ vector<pair<int,int>> clustering::find_neighbors(int a, int b, double A,double l
     {
       for(int j=-step;j<=step;j++)
       {
-        if(i==0||j==0||x+i>=M||y+j>=N||x+i<0||y+j<0||map(x+i,y+j)==0||abs(an(x+i,y+j)-A)>20||abs(l-ln(x+i,y+j))/(l+ln(x+i,y+j))>0.20)
+        if(i==0||j==0||x+i>=M||y+j>=N||x+i<0||y+j<0||map(x+i,y+j)==0||abs(an(x+i,y+j)-A)*180/3.14>50||abs(l-ln(x+i,y+j))/(l+ln(x+i,y+j))>0.20)
           continue;
         checked.push(make_pair(x+i,y+j));
+        // std::cout<<"Angle Difference: "<<an(x,y)-an(x+i,y+j)<<endl;
       }
     }
   }
@@ -101,10 +102,22 @@ VectorXi clustering::cluster()
     int points=0;
     for(auto x:t)
     {
-      int id=ids(x.first,x.second);
-      classified(id)=1;
+        int id=ids(x.first,x.second);
+        classified(id)=1;
     }
     if(t.size()>50)
+    {
+      unordered_set<int> set;
+      for(auto x:t)
+      {
+          int id=ids(x.first,x.second);
+          set.insert(id);
+          classes(ids(x.first,x.second))=class_no;
+      }
+      clusters.push_back(set);
+      class_no++;
+    }
+    else if(t.size()>20)
     {
       vector<Point2f> v;
       for(auto x:t)

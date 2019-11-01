@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/rex/Desktop/REX_WS/AnomalousRegion1/src/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,164 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named contour_method
+# Target rules for targets named integrated
 
 # Build rule for target.
-contour_method: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 contour_method
-.PHONY : contour_method
+integrated: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 integrated
+.PHONY : integrated
 
 # fast build rule for target.
-contour_method/fast:
-	$(MAKE) -f CMakeFiles/contour_method.dir/build.make CMakeFiles/contour_method.dir/build
-.PHONY : contour_method/fast
+integrated/fast:
+	$(MAKE) -f CMakeFiles/integrated.dir/build.make CMakeFiles/integrated.dir/build
+.PHONY : integrated/fast
 
-#=============================================================================
-# Target rules for targets named gradient_filtering
+integrated.o: integrated.cpp.o
 
-# Build rule for target.
-gradient_filtering: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gradient_filtering
-.PHONY : gradient_filtering
-
-# fast build rule for target.
-gradient_filtering/fast:
-	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/build
-.PHONY : gradient_filtering/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named clustering_test
-
-# Build rule for target.
-clustering_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clustering_test
-.PHONY : clustering_test
-
-# fast build rule for target.
-clustering_test/fast:
-	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/build
-.PHONY : clustering_test/fast
-
-clustering_test.o: clustering_test.cpp.o
-
-.PHONY : clustering_test.o
+.PHONY : integrated.o
 
 # target to build an object file
-clustering_test.cpp.o:
-	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.o
-.PHONY : clustering_test.cpp.o
+integrated.cpp.o:
+	$(MAKE) -f CMakeFiles/integrated.dir/build.make CMakeFiles/integrated.dir/integrated.cpp.o
+.PHONY : integrated.cpp.o
 
-clustering_test.i: clustering_test.cpp.i
+integrated.i: integrated.cpp.i
 
-.PHONY : clustering_test.i
-
-# target to preprocess a source file
-clustering_test.cpp.i:
-	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.i
-.PHONY : clustering_test.cpp.i
-
-clustering_test.s: clustering_test.cpp.s
-
-.PHONY : clustering_test.s
-
-# target to generate assembly for a file
-clustering_test.cpp.s:
-	$(MAKE) -f CMakeFiles/clustering_test.dir/build.make CMakeFiles/clustering_test.dir/clustering_test.cpp.s
-.PHONY : clustering_test.cpp.s
-
-contour_method.o: contour_method.cpp.o
-
-.PHONY : contour_method.o
-
-# target to build an object file
-contour_method.cpp.o:
-	$(MAKE) -f CMakeFiles/contour_method.dir/build.make CMakeFiles/contour_method.dir/contour_method.cpp.o
-.PHONY : contour_method.cpp.o
-
-contour_method.i: contour_method.cpp.i
-
-.PHONY : contour_method.i
+.PHONY : integrated.i
 
 # target to preprocess a source file
-contour_method.cpp.i:
-	$(MAKE) -f CMakeFiles/contour_method.dir/build.make CMakeFiles/contour_method.dir/contour_method.cpp.i
-.PHONY : contour_method.cpp.i
+integrated.cpp.i:
+	$(MAKE) -f CMakeFiles/integrated.dir/build.make CMakeFiles/integrated.dir/integrated.cpp.i
+.PHONY : integrated.cpp.i
 
-contour_method.s: contour_method.cpp.s
+integrated.s: integrated.cpp.s
 
-.PHONY : contour_method.s
-
-# target to generate assembly for a file
-contour_method.cpp.s:
-	$(MAKE) -f CMakeFiles/contour_method.dir/build.make CMakeFiles/contour_method.dir/contour_method.cpp.s
-.PHONY : contour_method.cpp.s
-
-gradient_filtering.o: gradient_filtering.cpp.o
-
-.PHONY : gradient_filtering.o
-
-# target to build an object file
-gradient_filtering.cpp.o:
-	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.o
-.PHONY : gradient_filtering.cpp.o
-
-gradient_filtering.i: gradient_filtering.cpp.i
-
-.PHONY : gradient_filtering.i
-
-# target to preprocess a source file
-gradient_filtering.cpp.i:
-	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.i
-.PHONY : gradient_filtering.cpp.i
-
-gradient_filtering.s: gradient_filtering.cpp.s
-
-.PHONY : gradient_filtering.s
+.PHONY : integrated.s
 
 # target to generate assembly for a file
-gradient_filtering.cpp.s:
-	$(MAKE) -f CMakeFiles/gradient_filtering.dir/build.make CMakeFiles/gradient_filtering.dir/gradient_filtering.cpp.s
-.PHONY : gradient_filtering.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+integrated.cpp.s:
+	$(MAKE) -f CMakeFiles/integrated.dir/build.make CMakeFiles/integrated.dir/integrated.cpp.s
+.PHONY : integrated.cpp.s
 
 # Help Target
 help:
@@ -276,24 +156,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... contour_method"
-	@echo "... gradient_filtering"
-	@echo "... main"
-	@echo "... clustering_test"
-	@echo "... clustering_test.o"
-	@echo "... clustering_test.i"
-	@echo "... clustering_test.s"
-	@echo "... contour_method.o"
-	@echo "... contour_method.i"
-	@echo "... contour_method.s"
-	@echo "... gradient_filtering.o"
-	@echo "... gradient_filtering.i"
-	@echo "... gradient_filtering.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... rebuild_cache"
+	@echo "... integrated"
+	@echo "... integrated.o"
+	@echo "... integrated.i"
+	@echo "... integrated.s"
 .PHONY : help
 
 

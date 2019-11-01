@@ -36,7 +36,7 @@ int main( int argc, char** argv )
       image_params test_(test,2,7);
       // // test_.stat_calculation();
       test_.percentile();
-      Mat mask=test_.filter_vectors();
+      Mat mask=test_.filter_vectors(93,95);
       namedWindow( "Display window", WINDOW_AUTOSIZE );
       imshow( "Display window", mask );     
       namedWindow( "Real Image", WINDOW_AUTOSIZE );

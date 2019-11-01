@@ -36,7 +36,7 @@ int main( int argc, char** argv )
 
       image_params test_(test,2,7);
       test_.stat_calculation();
-      Mat mask=get_mask(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A);
+      Mat mask=get_mask(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A,20.0);
       namedWindow( "Display window", WINDOW_AUTOSIZE );
       imshow( "Display window", mask );     
       namedWindow( "Real Image", WINDOW_AUTOSIZE );

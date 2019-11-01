@@ -7,7 +7,6 @@
 #include <Eigen/Dense>
 #include <Eigen/Core>
 #include <opencv2/core/eigen.hpp>
-#include <unordered_set>
 #include <fstream>
 #include "/home/rex/Desktop/REX_WS/AnomalousRegion1/src/Debugging_Utilities/debugging_utilities.h"  
 using namespace std;
@@ -18,19 +17,19 @@ class image_params
 {
   public:
     Mat image;
-    MatrixXf X;//X Gradient
-    MatrixXf Y;//Y Gradient
-    MatrixXf M;//Magnitude of the gradients
-    MatrixXf A;//Angle between the x and the y gradient.
-    MatrixXf mean_m;//Mean of the magnitude.
-    MatrixXf std_m;//Standard Deviation of the magnitude.
-    MatrixXf mean_A;//Mean of the Angle.
-    MatrixXf std_A;//Standard Deviation of the Angle.
-    VectorXi per;//Stores the computed percentile of the gradients.
-    vector<pair<int,int>> filtered;//
-    MatrixXi ids;//
+    MatrixXf X;
+    MatrixXf Y;
+    MatrixXf M;
+    MatrixXf A;
+    MatrixXf mean_m;
+    MatrixXf std_m;
+    MatrixXf mean_A;
+    MatrixXf std_A;
+    VectorXi per;
+    vector<pair<int,int>> filtered;
+    MatrixXi ids;
 
-    int K,kernel_size;//K is the number of rows or columns taken for calculating gradients. Kernel_size is the size of the sliding window for statistical calculation.
+    int K,kernel_size;
     image_params(Mat& img, int k,int ks);
     void gradient_calculation();
     void stat_calculation();
@@ -65,16 +64,14 @@ void image_params::gradient_calculation()
       X(i,j)=float(xb-xa)/count;
       Y(i,j)=float(yb-ya)/count;   
       M(i,j)=abs(sqrt(X(i,j)*X(i,j)+Y(i,j)*Y(i,j)));   
-      if(M(i,j)!=M(i,j)) M(i,j)=0;
       A(i,j)=atan2(Y(i,j),X(i,j));
-      if(A(i,j)!=A(i,j)) A(i,j)=0;
       int index=int(M(i,j));
       per(index)=per(index)+1;
     }
   }
 }
 
-void image_params::stat_calculation()//The time consuming function. 
+void image_params::stat_calculation()
 {
   for(int i=0;i<image.rows;i++)
   {
@@ -134,39 +131,20 @@ image_params::image_params(Mat& img,int k,int ks)
   gradient_calculation();
 }
 
-typedef MatrixXf Mx;
-
-Mat get_mask(Mx& ref_mean_mag,Mx& test_mean_mag, Mx& ref_sd_mag,Mx& test_sd_mag,Mx& ref_mean_ang,Mx& test_mean_ang,Mx& ref_sd_ang, Mx& test_sd_ang,vector<double> &params)
+Mat get_mask(MatrixXf& ref_mean,MatrixXf& test_mean, MatrixXf& ref_sd,MatrixXf& test_sd,MatrixXf& refA_mean,MatrixXf& testA_mean,double mean_m)
 {
-	int r=ref_mean_mag.rows(),c=ref_mean_mag.cols();
-	Mat mask(cv::Size(c,r),CV_8UC1,Scalar(0));
-	for(int i=0;i<r;i++)
+	Mat mask(cv::Size(ref_mean.cols(),ref_mean.rows()),CV_8UC1,Scalar(0));
+	for(int i=0;i<ref_mean.rows();i++)
 	{
-		for(int j=0;j<c;j++)
+		for(int j=0;j<ref_mean.cols();j++)
 		{
 			// if(abs(ref_mean(i,j)-test_mean(i,j))>10||abs(ref_sd(i,j)-test_sd(i,j))>10||abs(refA_mean(i,j)-testA_mean(i,j))>55)
-      if(abs(ref_mean_mag(i,j)-test_mean_mag(i,j))>params[0]&&abs(ref_sd_mag(i,j)-test_sd_mag(i,j))>params[1])
+      // if(abs(ref_mean(i,j)-test_mean(i,j))>mean_m)
+      if(abs(ref_sd(i,j)-test_sd(i,j))>10)
 				mask.at<uchar>(i,j)=255;
 		}
 	}
 	return mask;
-}
-
-unordered_set<int> get_mask_set(Mx& ref_mean_mag,Mx& test_mean_mag, Mx& ref_sd_mag,Mx& test_sd_mag,Mx& ref_mean_ang,Mx& test_mean_ang,Mx& ref_sd_ang, Mx& test_sd_ang,vector<double> &params)
-{
-  unordered_set<int> mask_points;
-  int r=ref_mean_mag.rows(),c=ref_mean_mag.cols();
-  Mat mask(cv::Size(c,r),CV_8UC1,Scalar(0));
-  for(int i=0;i<r;i++)
-  {
-    for(int j=0;j<c;j++)
-    {
-      // if(abs(ref_mean(i,j)-test_mean(i,j))>10||abs(ref_sd(i,j)-test_sd(i,j))>10||abs(refA_mean(i,j)-testA_mean(i,j))>55)
-      if(abs(ref_mean_mag(i,j)-test_mean_mag(i,j))>params[0]&&abs(ref_sd_mag(i,j)-test_sd_mag(i,j))>params[1])
-        mask_points.insert(10000*i+j);
-    }
-  }
-  return mask_points;
 }
 
 Mat image_params::filter_vectors(double p_min,double p_max)
@@ -176,10 +154,7 @@ Mat image_params::filter_vectors(double p_min,double p_max)
     for(int i=0;i<M.rows();i++)
       for(int j=0;j<M.cols();j++)
       {
-        if(M(i,j)!=M(i,j)||(X(i,j)==0&&Y(i,j)==0)) M(i,j)=0;
         int index=abs(int(M(i,j)));
-        // std::cout<<M(i,j)<<" "<<X(i,j)<<" "<<Y(i,j)<<" "<<A(i,j)<<endl;
-        // if(X(i,j)==0&&Y(i,j)==0) std::cout<<M(i,j)<<" "<<A(i,j)<<endl;
         double p = double(per(index))/double(per(359))*100;
         if(p>=p_min&&p<=p_max){
           mask.at<uchar>(i,j)=255;

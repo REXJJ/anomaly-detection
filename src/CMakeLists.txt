@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-add_compile_options(-std=c++11 -O3)
+add_compile_options(-std=c++11 -O3  -lopencv_imgcodecs)
 project( Anomaly1 )
 find_package(OpenCV REQUIRED )
 # find_package(Boost 1.57.0 COMPONENTS serialization)
@@ -14,15 +14,21 @@ find_package(OpenCV REQUIRED )
 # include_directories(/usr/local/include/)
 # include_directories(${ARMADILLO_INCLUDE_DIRS})
 
-add_executable(main  main.cpp)
-# target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${MLPACK_LIBRARY} ${ARMADILLO_LIBRARIES})
-target_link_libraries( main ${OpenCV_LIBS})
+# add_executable(main  main.cpp)
+# # target_link_libraries( main ${OpenCV_LIBS} ${Boost_LIBRARIES} ${MLPACK_LIBRARY} ${ARMADILLO_LIBRARIES})
+# target_link_libraries( main ${OpenCV_LIBS})
 
-add_executable(contour_method  contour_method.cpp)
-target_link_libraries( contour_method ${OpenCV_LIBS})
+# add_executable(contour_method  contour_method.cpp)
+# target_link_libraries( contour_method ${OpenCV_LIBS})
 
-add_executable(gradient_filtering  gradient_filtering.cpp)
-target_link_libraries(gradient_filtering ${OpenCV_LIBS})
+# add_executable(gradient_filtering  gradient_filtering.cpp)
+# target_link_libraries(gradient_filtering ${OpenCV_LIBS})
 
-add_executable(clustering_test  clustering_test.cpp)
-target_link_libraries(clustering_test ${OpenCV_LIBS})
+# add_executable(clustering_test  clustering_test.cpp)
+# target_link_libraries(clustering_test ${OpenCV_LIBS})
+
+add_executable(integrated  integrated.cpp)
+target_link_libraries(integrated ${OpenCV_LIBS})
+
+# add_executable(reference_image_test  reference_image_test.cpp)
+# target_link_libraries(reference_image_test ${OpenCV_LIBS})

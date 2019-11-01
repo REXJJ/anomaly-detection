@@ -1,3 +1,4 @@
+#include <unordered_set>
 #include "cv.h"
 #include "highgui.h"
 #include "include/reference_bs.hpp"
@@ -26,6 +27,20 @@ static void on_high(int, void *)
 }
 
 
+int mag_mean=0;
+int mag_sd=0;
+
+static void mean_magnitude(int, void *)
+{
+    setTrackbarPos("magnitude_mean", window_detection_name, mag_mean);
+}
+static void sd_magnitude(int, void *)
+{
+    setTrackbarPos("magnitude_sd", window_detection_name, mag_sd);
+}
+
+
+
 int main( int argc, char** argv )
 {
   window_detection_name="Control";
@@ -36,6 +51,10 @@ int main( int argc, char** argv )
 
   createTrackbar("Low", window_detection_name, &low, max_value, on_low);
   createTrackbar("High", window_detection_name, &high, max_value, on_high);
+
+  createTrackbar("magnitude_mean", window_detection_name, &mag_mean,100,mean_magnitude);
+  createTrackbar("magnitude_sd", window_detection_name, &mag_sd,100,sd_magnitude);
+
   // VideoCapture cap("/home/rex/Desktop/ICRA/test1.mp4"); 
   VideoCapture cap("/home/rex/Desktop/Videos/test.mp4"); 
 
@@ -66,7 +85,14 @@ int main( int argc, char** argv )
 
       image_params test_(test,2,7);
       // // test_.stat_calculation();
+
+      test_.stat_calculation();
+      vector<double> params={double(mag_mean),double(mag_sd),20,10};
+      unordered_set<int> mask_set=get_mask_set(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A,image.std_A,test_.std_A,params);
+      Mat dummy=get_mask(image.mean_m,test_.mean_m,image.std_m,test_.std_m,image.mean_A,test_.mean_A,image.std_A,test_.std_A,params);
+
       test_.percentile();
+
       Mat mask=test_.filter_vectors(low,high);
       MatrixXi mk=MatrixXi::Zero(mask.rows,mask.cols);
       for(int i=0;i<mk.rows();i++)
@@ -82,15 +108,17 @@ int main( int argc, char** argv )
       clustering cl(test_.A,test_.M,mk,test_.filtered,test_.ids);
       VectorXi classes=cl.cluster();
       vector<unordered_set<int>> clusters=cl.clusters;
-
       for(auto x:clusters)
       {
         Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
         vector<Point2f> v;
+        int count=0;
         for(auto y:x)
         {
           v.push_back(Point2f(double(test_.filtered[y].second),double(test_.filtered[y].first)));
+          if(mask_set.find(test_.filtered[y].first*10000+test_.filtered[y].second)!=mask_set.end()) count++;
         }
+        if(count<10) continue;
         RotatedRect r=minAreaRect(v);
         Point2f rect_points[4]; r.points( rect_points );
         for( int j = 0; j < 4; j++ )
@@ -126,6 +154,7 @@ int main( int argc, char** argv )
       imshow( "Before Filtering",mask ); 
       imshow( "Display window", new_mask );     
       imshow( "Real Image", test );   
+      imshow("Dummy",dummy);
       // namedWindow( "Clusters", WINDOW_AUTOSIZE );
       // imshow( "Clusters", drawing );            
       std::cout<<count++<<endl;

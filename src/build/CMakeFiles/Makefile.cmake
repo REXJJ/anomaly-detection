@@ -11,6 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.15.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.15.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.15.4/CMakeSystem.cmake"
+  "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig-version.cmake"
+  "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig.cmake"
+  "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules-release.cmake"
+  "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules.cmake"
   "/usr/local/share/cmake-3.15/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.15/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -24,16 +28,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
   "/usr/local/share/cmake-3.15/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.15/Modules/Compiler/GNU.cmake"
+  "/usr/local/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/local/share/cmake-3.15/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/local/share/cmake-3.15/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/local/share/cmake-3.15/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/local/share/cmake-3.15/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.15/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
-  "/usr/share/OpenCV/OpenCVConfig-version.cmake"
-  "/usr/share/OpenCV/OpenCVConfig.cmake"
-  "/usr/share/OpenCV/OpenCVModules-release.cmake"
-  "/usr/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
@@ -49,8 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/contour_method.dir/DependInfo.cmake"
-  "CMakeFiles/gradient_filtering.dir/DependInfo.cmake"
-  "CMakeFiles/main.dir/DependInfo.cmake"
-  "CMakeFiles/clustering_test.dir/DependInfo.cmake"
+  "CMakeFiles/integrated.dir/DependInfo.cmake"
   )
