@@ -44,7 +44,7 @@ void image_params::gradient_calculation()
   {
     for(size_t j=0;j<image.cols;j++)
     {
-      if(i-K<0||j-K<0||i+K>=image.rows||j+K>image.cols)
+      if(i-K<0||j-K<0||i+K>=image.rows||j+K>image.cols||j<60||i<102||i>573)
       {
         X(i,j)=0.0;
         Y(i,j)=0.0;
