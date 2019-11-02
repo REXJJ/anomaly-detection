@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4da34/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4da34.dir/build.make CMakeFiles/cmTC_4da34.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4da34.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_4da34.dir/testCCompiler.c.o   -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_4da34
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4da34.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_4da34.dir/testCCompiler.c.o  -o cmTC_4da34 -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_88dc2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_88dc2.dir/build.make CMakeFiles/cmTC_88dc2.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88dc2.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_88dc2.dir/testCCompiler.c.o   -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_88dc2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88dc2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_88dc2.dir/testCCompiler.c.o  -o cmTC_88dc2 -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cd862/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cd862.dir/build.make CMakeFiles/cmTC_cd862.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_cd862
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd862.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o  -o cmTC_cd862 -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_2ae64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ae64.dir/build.make CMakeFiles/cmTC_2ae64.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_2ae64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae64.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o  -o cmTC_2ae64 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cd862' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgAcsyy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_cd862 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2ae64' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdwVU4L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2ae64 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_cd862/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cd862.dir/build.make CMakeFiles/cmTC_cd862.dir/build]
-  ignore line: [make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_cd862]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd862.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o  -o cmTC_cd862 -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2ae64/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2ae64.dir/build.make CMakeFiles/cmTC_2ae64.dir/build]
+  ignore line: [make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_2ae64]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ae64.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o  -o cmTC_2ae64 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cd862' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgAcsyy.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_cd862 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2ae64' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdwVU4L.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2ae64 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccgAcsyy.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccdwVU4L.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_cd862] ==> ignore
+    arg [cmTC_2ae64] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_cd862.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_2ae64.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -153,17 +153,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a1efa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a1efa.dir/build.make CMakeFiles/cmTC_a1efa.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a1efa.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_a1efa.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_a1efa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1efa.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_a1efa.dir/feature_tests.c.o  -o cmTC_a1efa -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_afa22/fast"
+/usr/bin/make -f CMakeFiles/cmTC_afa22.dir/build.make CMakeFiles/cmTC_afa22.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_afa22.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_afa22.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_afa22
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afa22.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_afa22.dir/feature_tests.c.o  -o cmTC_afa22 -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -173,17 +173,17 @@ make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/C
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9f9bb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9f9bb.dir/build.make CMakeFiles/cmTC_9f9bb.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9f9bb.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_9f9bb.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9f9bb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f9bb.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_9f9bb.dir/feature_tests.c.o  -o cmTC_9f9bb -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_1f89c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1f89c.dir/build.make CMakeFiles/cmTC_1f89c.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f89c.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_1f89c.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1f89c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f89c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1f89c.dir/feature_tests.c.o  -o cmTC_1f89c -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -193,17 +193,17 @@ make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/C
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_21803/fast"
-/usr/bin/make -f CMakeFiles/cmTC_21803.dir/build.make CMakeFiles/cmTC_21803.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_21803.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_21803.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_21803
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21803.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_21803.dir/feature_tests.c.o  -o cmTC_21803 -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a018c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a018c.dir/build.make CMakeFiles/cmTC_a018c.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a018c.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_a018c.dir/feature_tests.c.o   -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a018c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a018c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a018c.dir/feature_tests.c.o  -o cmTC_a018c -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -211,30 +211,30 @@ make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/C
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8b58/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8b58.dir/build.make CMakeFiles/cmTC_d8b58.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d8b58.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_d8b58.dir/testCXXCompiler.cxx.o -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d8b58
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8b58.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_d8b58.dir/testCXXCompiler.cxx.o  -o cmTC_d8b58 -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2e48c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2e48c.dir/build.make CMakeFiles/cmTC_2e48c.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2e48c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_2e48c.dir/testCXXCompiler.cxx.o -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_2e48c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e48c.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_2e48c.dir/testCXXCompiler.cxx.o  -o cmTC_2e48c -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_26198/fast"
-/usr/bin/make -f CMakeFiles/cmTC_26198.dir/build.make CMakeFiles/cmTC_26198.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_26198
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26198.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_26198 -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_a8b89/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a8b89.dir/build.make CMakeFiles/cmTC_a8b89.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a8b89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8b89.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8b89 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,23 +244,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_26198' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCUwolK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_26198 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8b89' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc08C0d8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a8b89 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_26198/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_26198.dir/build.make CMakeFiles/cmTC_26198.dir/build]
-  ignore line: [make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_26198]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26198.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_26198 -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a8b89/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a8b89.dir/build.make CMakeFiles/cmTC_a8b89.dir/build]
+  ignore line: [make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a8b89]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8b89.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8b89 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_26198' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccCUwolK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_26198 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8b89' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc08C0d8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a8b89 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccCUwolK.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc08C0d8.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_26198] ==> ignore
+    arg [cmTC_a8b89] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_26198.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_a8b89.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -336,17 +336,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_af2e9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_af2e9.dir/build.make CMakeFiles/cmTC_af2e9.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_af2e9.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_af2e9.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_af2e9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af2e9.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_af2e9.dir/feature_tests.cxx.o  -o cmTC_af2e9 -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_eae01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eae01.dir/build.make CMakeFiles/cmTC_eae01.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eae01.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_eae01.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_eae01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eae01.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_eae01.dir/feature_tests.cxx.o  -o cmTC_eae01 -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -409,17 +409,17 @@ make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/C
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f86b2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f86b2.dir/build.make CMakeFiles/cmTC_f86b2.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f86b2.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_f86b2.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f86b2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f86b2.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_f86b2.dir/feature_tests.cxx.o  -o cmTC_f86b2 -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c9043/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c9043.dir/build.make CMakeFiles/cmTC_c9043.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c9043.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_c9043.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c9043
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9043.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_c9043.dir/feature_tests.cxx.o  -o cmTC_c9043 -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -482,17 +482,17 @@ make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/C
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5fa3b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5fa3b.dir/build.make CMakeFiles/cmTC_5fa3b.dir/build
-make[1]: Entering directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5fa3b.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_5fa3b.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5fa3b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fa3b.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_5fa3b.dir/feature_tests.cxx.o  -o cmTC_5fa3b -rdynamic 
-make[1]: Leaving directory '/home/cl/Desktop/REX_WS/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9aa3f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9aa3f.dir/build.make CMakeFiles/cmTC_9aa3f.dir/build
+make[1]: Entering directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9aa3f.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_9aa3f.dir/feature_tests.cxx.o -c /home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9aa3f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9aa3f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9aa3f.dir/feature_tests.cxx.o  -o cmTC_9aa3f -rdynamic 
+make[1]: Leaving directory '/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

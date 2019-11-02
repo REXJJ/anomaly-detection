@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/include/clustering_functions.hpp
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/include/clustering_functions.hpp
 iostream
 -
 cmath
@@ -28,7 +28,7 @@ stack
 unordered_set
 -
 
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/include/reference_bs.hpp
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/include/reference_bs.hpp
 iostream
 -
 cmath
@@ -48,7 +48,7 @@ unordered_set
 fstream
 -
 
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/integrated.cpp
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/integrated.cpp
 boost/geometry.hpp
 -
 boost/geometry/geometries/point_xy.hpp
@@ -58,13 +58,13 @@ boost/geometry/geometries/polygon.hpp
 unordered_set
 -
 cv.h
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/cv.h
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/cv.h
 highgui.h
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/highgui.h
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/highgui.h
 include/reference_bs.hpp
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/include/reference_bs.hpp
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/include/reference_bs.hpp
 include/clustering_functions.hpp
-/home/cl/Desktop/REX_WS/AnomalousRegion1/src/include/clustering_functions.hpp
+/home/cl/Desktop/REX_WS/arm-composite-layup/catkin_ws/src/vision_packages/justAPackage_WrinkleDetection/AnomalousRegion1/src/include/clustering_functions.hpp
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cv.h
 opencv2/core/core_c.h
