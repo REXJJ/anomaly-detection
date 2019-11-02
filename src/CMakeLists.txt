@@ -11,7 +11,7 @@ find_package(OpenCV REQUIRED )
 # )
 
 # include_directories(include)
-# include_directories(/usr/local/include/)
+include_directories(/usr/local/include/eigen3)
 # include_directories(${ARMADILLO_INCLUDE_DIRS})
 
 # add_executable(main  main.cpp)
@@ -28,7 +28,7 @@ find_package(OpenCV REQUIRED )
 # target_link_libraries(clustering_test ${OpenCV_LIBS})
 
 add_executable(integrated  integrated.cpp)
-target_link_libraries(integrated ${OpenCV_LIBS})
+target_link_libraries(integrated ${OpenCV_LIBS} ${Boost_LIBRARIES})
 
 # add_executable(reference_image_test  reference_image_test.cpp)
 # target_link_libraries(reference_image_test ${OpenCV_LIBS})

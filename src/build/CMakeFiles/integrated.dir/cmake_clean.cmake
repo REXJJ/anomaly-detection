@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/integrated.dir/integrated.cpp.o"
-  "integrated"
   "integrated.pdb"
+  "integrated"
 )
 
 # Per-language clean rules from dependency scanning.

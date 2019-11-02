@@ -2,6 +2,7 @@
 #include <boost/geometry/geometries/point_xy.hpp>
 #include <boost/geometry/geometries/polygon.hpp>
 #include <unordered_set>
+#include <chrono>
 #include "cv.h"
 #include "highgui.h"
 #include "include/reference_bs.hpp"
@@ -41,6 +42,9 @@ static void sd_magnitude(int, void *)
 {
     setTrackbarPos("magnitude_sd", window_detection_name, mag_sd);
 }
+
+
+
 
 bool lines_intersect(double l1[2][2], double l2[2][2])
 {
@@ -93,81 +97,83 @@ bool lines_intersect(double l1[2][2], double l2[2][2])
 	return false;
 }
 
-Eigen::MatrixXd InPoly(Eigen::MatrixXd q, Eigen::MatrixXd p)
+void InPoly(const Eigen::MatrixXd& q, const Eigen::MatrixXd& p, Eigen::MatrixXd& in)
 {
-	double l1[2][2];
-	double l2[2][2];
+    double l1[2][2];
+    double l2[2][2];
 
-	Eigen::MatrixXd in = Eigen::VectorXd::Constant(q.rows(),1,0);
+    double xmin = p.col(0).minCoeff();
+    double xmax = p.col(0).maxCoeff();
+    double ymin = p.col(1).minCoeff();
+    double ymax = p.col(1).maxCoeff();
 
-	double xmin = p.col(0).minCoeff();
-	double xmax = p.col(0).maxCoeff();
-	double ymin = p.col(1).minCoeff();
-	double ymax = p.col(1).maxCoeff();
-
-	for (long i=0;i<q.rows();++i)
-	{
-		// bounding box test
-		if (q(i,0)<xmin || q(i,0)>xmax || q(i,1)<ymin || q(i,1)>ymax)
-		{
-			continue;
-		}
-		int intersection_count = 0;
-		Eigen::MatrixXd cont_lines = Eigen::MatrixXd::Constant(p.rows(),1,0);
-		for (int j=0;j<p.rows();++j)
-		{
-			if (j==0)
-			{
-				l1[0][0] = q(i,0);l1[0][1] = q(i,1);
-				l1[1][0] = xmax;l1[1][1] = q(i,1);
-				l2[0][0] = p(p.rows()-1,0);l2[0][1] = p(p.rows()-1,1);
-				l2[1][0] = p(j,0);l2[1][1] = p(j,1);
-				if (lines_intersect(l1,l2))
-				{
-					intersection_count++;
-					cont_lines(j,0) = 1;
-				}	
-			}
-			else
-			{
-				l1[0][0] = q(i,0);l1[0][1] = q(i,1);
-				l1[1][0] = xmax;l1[1][1] = q(i,1);
-				l2[0][0] = p(j,0);l2[0][1] = p(j,1);
-				l2[1][0] = p(j-1,0);l2[1][1] = p(j-1,1);
-				if (lines_intersect(l1,l2))
-				{
-					intersection_count++;
-					cont_lines(j,0) = 1;
-					if (cont_lines(j-1,0)==1)
-					{
-						if (p(j-1,1)==q(i,1))
-						{
-							if (j-1==0)
-							{
-								if (!((p(p.rows()-1,1)<p(j-1,1) && p(j,1)<p(j-1,1)) || (p(p.rows()-1,1)>p(j-1,1) && p(j,1)>p(j-1,1))))
-								{
-									intersection_count--;
-								}
-							}
-							else
-							{
-								if (!((p(j-2,1)<p(j-1,1) && p(j,1)<p(j-1,1)) || (p(j-2,1)>p(j-1,1) && p(j,1)>p(j-1,1))))
-								{
-									intersection_count--;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		if (intersection_count%2==1)
-		{
-			in(i,0) = 1;
-		}
-	}
-	return in;
+    for (long i=0;i<q.rows();++i)
+    {
+        // bounding box test
+        if (q(i,0)<xmin || q(i,0)>xmax || q(i,1)<ymin || q(i,1)>ymax)
+        {
+            continue;
+        }
+        int intersection_count = 0;
+        Eigen::MatrixXd cont_lines = Eigen::MatrixXd::Constant(p.rows(),1,0);
+        for (int j=0;j<p.rows();++j)
+        {
+            if (j==0)
+            {
+                l1[0][0] = q(i,0);l1[0][1] = q(i,1);
+                l1[1][0] = xmax;l1[1][1] = q(i,1);
+                l2[0][0] = p(p.rows()-1,0);l2[0][1] = p(p.rows()-1,1);
+                l2[1][0] = p(j,0);l2[1][1] = p(j,1);
+                if (lines_intersect(l1,l2))
+                {
+                    intersection_count++;
+                    cont_lines(j,0) = 1;
+                }   
+            }
+            else
+            {
+                l1[0][0] = q(i,0);l1[0][1] = q(i,1);
+                l1[1][0] = xmax;l1[1][1] = q(i,1);
+                l2[0][0] = p(j,0);l2[0][1] = p(j,1);
+                l2[1][0] = p(j-1,0);l2[1][1] = p(j-1,1);
+                if (lines_intersect(l1,l2))
+                {
+                    intersection_count++;
+                    cont_lines(j,0) = 1;
+                    if (cont_lines(j-1,0)==1)
+                    {
+                        if (p(j-1,1)==q(i,1))
+                        {
+                            if (j-1==0)
+                            {
+                                if (!((p(p.rows()-1,1)<p(j-1,1) && p(j,1)<p(j-1,1)) || (p(p.rows()-1,1)>p(j-1,1) && p(j,1)>p(j-1,1))))
+                                {
+                                    intersection_count--;
+                                }
+                            }
+                            else
+                            {
+                                if (!((p(j-2,1)<p(j-1,1) && p(j,1)<p(j-1,1)) || (p(j-2,1)>p(j-1,1) && p(j,1)>p(j-1,1))))
+                                {
+                                    intersection_count--;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (intersection_count%2==1)
+        {
+            in(i,0) = 1;
+        }
+        else
+        {
+        	in(i,0) = 0;
+        }
+    }
 }
+
 
 int main( int argc, char** argv )
 {
@@ -194,25 +200,16 @@ int main( int argc, char** argv )
   Rect ROI(167,61,400,360);  
   Mat reference,test;
   reference=imread("/home/cl/Desktop/REX_WS/AnomalousRegion1/Images/ref_image1.jpg",0);
-  image_params image(reference,3,7);
+  image_params image(reference,2,9);
   // image.stat_calculation();
   typedef boost::geometry::model::d2::point_xy<double> point_type;
   typedef boost::geometry::model::polygon<point_type> polygon_type;
   polygon_type poly;
-  /*boost::geometry::read_wkt(
-  "POLYGON((32 43,27 66,42 141,68 243,76 301,95 355,353 353,360 324,373 219,381 116,385 70,371 30,367 10,291 11,170 17,164 23,64 38))", poly);*/
-
-  polygon_type right;
-
   boost::geometry::read_wkt(
-  "POLYGON((433 75,550 72,521 434,462 440))", right);
-
-  Eigen::MatrixXd points(4,2);
-  points<<433,75,550,72,521,434,462,440;
-
-    Eigen::MatrixXd points2(5,2);
-  points2<<202,106,200,170,271,446,428,449,389,67;
-
+  "POLYGON((32 43,27 66,42 141,68 243,76 301,95 355,353 353,360 324,373 219,381 116,385 70,371 30,367 10,291 11,170 17,164 23,64 38))", poly);
+  Eigen::MatrixXd points(17,2);
+  points << 32,43,27,66,42, 141,68, 243,76, 301,95, 355,353, 353,360, 324,373, 219,381, 116,385, 70,371, 30,367, 10,291, 11,170, 17,164, 23,64, 38;
+  
   int count=0;
   while(1){ 
       Mat frame;
@@ -227,8 +224,8 @@ int main( int argc, char** argv )
       //    cout <<" Usage: ReferenceImage TestImage" << endl;
       //    return -1;
       //   }
-      
-      image_params test_(test,3,7);
+
+      image_params test_(test,2,9);
       // // test_.stat_calculation();
 
       test_.stat_calculation();
@@ -263,28 +260,34 @@ int main( int argc, char** argv )
         {
           v.push_back(Point2f(double(test_.filtered[y].second),double(test_.filtered[y].first)));
           if(mask_set.find(test_.filtered[y].first*10000+test_.filtered[y].second)!=mask_set.end()) count++;
-          point_type p(test_.filtered[y].second,test_.filtered[y].first);
+          point_type p(test_.filtered[y].first,test_.filtered[y].second);
           // if(!boost::geometry::within(p, poly)) status=true;
-          Eigen::MatrixXd point(1,2);
-          point<<(test_.filtered[y].second),(test_.filtered[y].first);
-          Eigen::MatrixXd state=InPoly(point,points);
-          Eigen::MatrixXd state2=InPoly(point,points2);
-
-          if(state(0,0)==1||state2(0,0)==1)
+          auto clock_start = std::chrono::high_resolution_clock::now();
+          for(int kl=0;kl<100000;kl++)
           {
-          	status=true;
-            // std::cout<<test_.filtered[y].second<<" "<<test_.filtered[y].first<<endl;
+	          point_type p_t(rand()%1000,rand()%1000);
+    	      bool temp=boost::geometry::within(p_t, poly);
           }
 
-/*
-          if(boost::geometry::within(p,right))
-          	{
-          	    status=true;
-                std::cout<<test_.filtered[y].second<<" "<<test_.filtered[y].first<<endl;
-            }*/
+          auto clock_end = std::chrono::high_resolution_clock::now();
+          std::cout << "Time elapsed Boost is : " << std::chrono::duration_cast<std::chrono::nanoseconds>(clock_end - clock_start).count() << " microseconds.\n";        
+
+          Eigen::MatrixXd point(100000,2);
+          for(int kl=0;kl<100000;kl++)
+          {
+          	point(kl,0) = rand()%1000;
+          	point(kl,1) = rand()%1000;
+          }
+          Eigen::MatrixXd stat(100000,1);
+          // point<<test_.filtered[y].first,test_.filtered[y].second;
+          clock_start = std::chrono::high_resolution_clock::now();
+          InPoly(points,point,stat);
+          clock_end = std::chrono::high_resolution_clock::now();
+          std::cout << "Time elapsed In InPoly is : " << std::chrono::duration_cast<std::chrono::nanoseconds>(clock_end - clock_start).count() << " microseconds.\n";        
+          return 0;
 
         }
-        if(count<10||!status) continue;
+        if(count<10||status) continue;
         RotatedRect r=minAreaRect(v);
         Point2f rect_points[4]; r.points( rect_points );
         for( int j = 0; j < 4; j++ )
@@ -317,40 +320,6 @@ int main( int argc, char** argv )
       // std::cout<<"Not Found"<<endl;
       // out:
       // std::cout<<"Size of Cluster: "<<si<<endl;
-       Point rook_points[1][4];
-
-  rook_points[0][0]  = Point(433,75);
-  rook_points[0][1]  = Point(550,72);
-  rook_points[0][2]  = Point(521,434);
-  rook_points[0][3]  = Point(462,440);
-  
-  const Point* ppt[1] = { rook_points[0] };
-  int npt[] = { 4 };
-  fillPoly( test,
-        ppt,
-        npt,
-        1,
-        Scalar( 255, 255, 255 ),
-        8 );
-
-
-         Point roo_points[1][5];
-
-  roo_points[0][0]  = Point(202,106);
-  roo_points[0][1]  = Point(200,170);
-  roo_points[0][2]  = Point(271,446);
-  roo_points[0][3]  = Point(428,449);
-  roo_points[0][4]  = Point(389,67);
-
-  
-  const Point* ppt2[1] = { roo_points[0] };
-  int npt2[] = { 5 };
-  fillPoly( test,
-        ppt2,
-        npt2,
-        1,
-        Scalar( 255, 255, 255 ),
-        8 );
       imshow( "Before Filtering",mask ); 
       imshow( "Display window", new_mask );     
       imshow( "Real Image", test );   
